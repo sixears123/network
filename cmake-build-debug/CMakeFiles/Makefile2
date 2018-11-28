@@ -59,45 +59,45 @@ RM = "/cygdrive/c/Users/Jae Liu/.CLion2018.2/system/cygwin_cmake/bin/cmake.exe" 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /cygdrive/e/cppfile/file
+CMAKE_SOURCE_DIR = /cygdrive/e/cppfile/finalnetwork
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /cygdrive/e/cppfile/file/cmake-build-debug
+CMAKE_BINARY_DIR = /cygdrive/e/cppfile/finalnetwork/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/file.dir
+# Target rules for target CMakeFiles/net.dir
 
 # All Build rule for target.
-CMakeFiles/file.dir/all:
-	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/depend
-	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/e/cppfile/file/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target file"
-.PHONY : CMakeFiles/file.dir/all
+CMakeFiles/net.dir/all:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/depend
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/cygdrive/e/cppfile/finalnetwork/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target net"
+.PHONY : CMakeFiles/net.dir/all
 
 # Include target in all.
-all: CMakeFiles/file.dir/all
+all: CMakeFiles/net.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/file.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/cppfile/file/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/file.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/cppfile/file/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/file.dir/rule
+CMakeFiles/net.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/cppfile/finalnetwork/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/net.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /cygdrive/e/cppfile/finalnetwork/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/net.dir/rule
 
 # Convenience name for target.
-file: CMakeFiles/file.dir/rule
+net: CMakeFiles/net.dir/rule
 
-.PHONY : file
-
-# clean rule for target.
-CMakeFiles/file.dir/clean:
-	$(MAKE) -f CMakeFiles/file.dir/build.make CMakeFiles/file.dir/clean
-.PHONY : CMakeFiles/file.dir/clean
+.PHONY : net
 
 # clean rule for target.
-clean: CMakeFiles/file.dir/clean
+CMakeFiles/net.dir/clean:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/clean
+.PHONY : CMakeFiles/net.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/net.dir/clean
 
 .PHONY : clean
 
