@@ -24,7 +24,7 @@ void Floyd(int Array[MAX][MAX],int RouteNum,int cost[MAX][MAX],int NextRoute[MAX
 void output(int RouteNum,int cost[MAX][MAX],int NextRoute[MAX][MAX]){
     ofstream file;
     file.open("Route.txt");
-    for (int i = 1; i <RouteNum+1 ; ++i) {
+  /*  for (int i = 1; i <RouteNum+1 ; ++i) {
         file<<"第"<<i<<"个路由表"<<"\r"<<"\n";
         file<<"目的"<<"距离"<<"下一跳"<<"\r"<<"\n";
         for (int j = 1; j <RouteNum+1; ++j) {
@@ -32,6 +32,16 @@ void output(int RouteNum,int cost[MAX][MAX],int NextRoute[MAX][MAX]){
                 file<<j<<"   "<<cost[i][j]<<"    "<<NextRoute[i][j]<<"\r"<<"\n";
             }
         }
+    }*/
+    for (int i = 1; i <= RouteNum+1; ++i) {
+        file << "**********************************" <<"\r"<<"\n";
+        file << "***     路由器" << i << "的路由表        ***" <<"\r"<<"\n";
+        file << "***  目的     距离     下一跳  ***" <<"\r"<<"\n";
+        for (int j = 1; j <= RouteNum+1; ++j) {
+            if (j != i) file<<"*     "<< j << "        " << cost[i][j] << "          " << NextRoute[i][j] <<"      *"<<"\r"<<"\n";
+        }
+        file << "**********************************" <<"\r"<<"\n";
+        file <<"\r"<<"\n";
     }
     file.close();
 }
@@ -82,12 +92,7 @@ int DelRoute(int Array[MAX][MAX],int RouteNum,int code){
     }
     return RouteNum-1;
 }
-void AddEdge(int Array[MAX][MAX]){
-//
-}
-void DelEdge(){
 
-}
 int main(){
     int Array[MAX][MAX],cost[MAX][MAX],NextRoute[MAX][MAX],RouteNum;
     RouteNum=input(Array);
