@@ -4,11 +4,12 @@
 #include "Floyd.h"
 #include "Route.h"
 #include "Edge.h"
+#include "outputm.h"
 using namespace std;
 //int Array[1000][1000],cost[1000][1000],NextRoute[1000][1000];
 int main() {
     int (*Array)[1000]=new int[1000][1000],(*cost)[1000]=new int[1000][1000],(*NextRoute)[1000]=new int[1000][1000];
-    int RouteNum, num;
+    int RouteNum, num,m;
     RouteNum=input(Array);
     Floyd(Array,RouteNum,cost,NextRoute);
     output(RouteNum,cost,NextRoute);
@@ -23,7 +24,8 @@ int main() {
         cout << "          *       2.删除一个路由器，并重新生成路由表        *" << endl;
         cout << "          *       3.增加若干条边，并重新生成路由表          *" << endl;
         cout << "          *       4.删除若干条边，并重新生成路由表          *" << endl;
-        cout << "          *       5.退出                                  *" << endl;
+        cout << "          *       5.输出指定路由器的路由表                 *" << endl;
+        cout << "          *       6.退出                                  *" << endl;
         cout << "          *************************************************" << endl << endl;
         cout << "请输入相应的数字，执行相应的操作:";
         cin >> num;
@@ -32,6 +34,10 @@ int main() {
             case 2:{RouteNum=DelRoute(Array,RouteNum);Floyd(Array,RouteNum,cost,NextRoute);output(RouteNum,cost,NextRoute);};break;
             case 3:{AddEdge(Array);Floyd(Array,RouteNum,cost,NextRoute);output(RouteNum,cost,NextRoute);};break;
             case 4:{DelEdge(Array);Floyd(Array,RouteNum,cost,NextRoute);output(RouteNum,cost,NextRoute);};break;
+            case 5:{cout<<"请输入指定路由器的序号："<<endl;
+            cin>>m;
+                outputm(RouteNum,cost,NextRoute,m);};
+                break;
             default:{Del(Array);Del(cost);Del(NextRoute);exit(0);};
         }
         cout << endl;

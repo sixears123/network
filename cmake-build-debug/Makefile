@@ -258,6 +258,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+outputm.o: outputm.cpp.o
+
+.PHONY : outputm.o
+
+# target to build an object file
+outputm.cpp.o:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/outputm.cpp.o
+.PHONY : outputm.cpp.o
+
+outputm.i: outputm.cpp.i
+
+.PHONY : outputm.i
+
+# target to preprocess a source file
+outputm.cpp.i:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/outputm.cpp.i
+.PHONY : outputm.cpp.i
+
+outputm.s: outputm.cpp.s
+
+.PHONY : outputm.s
+
+# target to generate assembly for a file
+outputm.cpp.s:
+	$(MAKE) -f CMakeFiles/net.dir/build.make CMakeFiles/net.dir/outputm.cpp.s
+.PHONY : outputm.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... outputm.o"
+	@echo "... outputm.i"
+	@echo "... outputm.s"
 .PHONY : help
 
 
