@@ -8,7 +8,9 @@
 using namespace std;
 //int Array[1000][1000],cost[1000][1000],NextRoute[1000][1000];
 int main() {
-    int (*Array)[1000]=new int[1000][1000],(*cost)[1000]=new int[1000][1000],(*NextRoute)[1000]=new int[1000][1000];
+    cout<<"柴树森！"<<endl;
+    cout<<"方清！"<<endl;
+    int (*Array)[10050]=new int[1000][1000],(*cost)[1000]=new int[1000][1000],(*NextRoute)[1000]=new int[1000][1000];
     int RouteNum, num,m;
     RouteNum=input(Array);
     Floyd(Array,RouteNum,cost,NextRoute);
