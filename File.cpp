@@ -9,11 +9,11 @@ using namespace std;
 void output(int RouteNum,int cost[1000][1000],int NextRoute[1000][1000]){
     ofstream file;
     file.open("Route.txt");
-    for (int i = 1; i <= RouteNum+1; ++i) {
+    for (int i = 1; i <= RouteNum; ++i) {
         file << "**********************************" <<"\r"<<"\n";
         file << "***     路由器" << i << "的路由表        ***" <<"\r"<<"\n";
         file << "***  目的     距离     下一跳  ***" <<"\r"<<"\n";
-        for (int j = 1; j <= RouteNum+1; ++j) {
+        for (int j = 1; j <= RouteNum; ++j) {
             if (j != i) file<<"       "<< j << "        " << cost[i][j] << "          " << NextRoute[i][j] <<"       "<<"\r"<<"\n";
         }
         file << "**********************************" <<"\r"<<"\n";

@@ -7,7 +7,6 @@
 using namespace std;
 //int Array[1000][1000],cost[1000][1000],NextRoute[1000][1000];
 int main() {
-    cout<<"方清是最优秀的！！"<<endl;
     int (*Array)[1000]=new int[1000][1000],(*cost)[1000]=new int[1000][1000],(*NextRoute)[1000]=new int[1000][1000];
     int RouteNum, num;
     RouteNum=input(Array);
